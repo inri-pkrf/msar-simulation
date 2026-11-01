@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>הודעה נכנסת: ניהול המס״ר בשעה הראשונה</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="stage" id="stage">
+  <header>
+    <div class="top">
+      <div class="ttl">📟 חמ״ל מס״ר</div>
+      <div class="tools">
+        <div class="phase" id="phase">שלב א׳ · הקמה</div>
+        <button class="fs" id="fs" type="button" aria-label="מסך מלא">⛶ מסך מלא</button>
+      </div>
+    </div>
+    <div class="sub"><span id="evn">הודעה 1 מתוך 5</span><span id="clock">⏱ חלפו 12 דקות מהפגיעה</span></div>
+    <div class="meter"><div class="fill" id="fill"></div></div>
+    <div class="mlab"><span>מדד לחץ בחמ״ל</span><b id="pct">55%</b></div>
+  </header>
+
+  <div id="chat" aria-live="polite"></div>
+  <div id="tray"></div>
+
+  <div class="ov" id="start">
+    <div class="ico">📟</div>
+    <h1>הודעה נכנסת:<br>ניהול המס״ר בשעה הראשונה</h1>
+    <h2>ניהול מרכז הסיוע הראשוני עובר לידיים שלך.<br>חמש הודעות דחופות מהשטח, ולכל אחת שלוש תגובות אפשריות.<br>כל החלטה משנה את לחץ החמ״ל.</h2>
+    <button class="btn" id="go" type="button">להתחלת משמרת ◀</button>
+  </div>
+  <div class="ov hide" id="end"></div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

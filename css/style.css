@@ -1,0 +1,44 @@
+/* עיצוב המסך. כל הגדלים ביחידות cqw (אחוז מרוחב המסך), כך שהכול מתכווץ ומתרחב יחד. */
+:root{--bg:#0b141a;--panel:#111b21;--bar:#1f2c34;--in:#1f2c34;--out:#005c4b;--ok:#25d366;--warn:#ffb020;--bad:#ff4d4f;--tx:#e9edef;--mut:#8696a0;color-scheme:dark}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;margin:0;background:#000;color:var(--tx);font-family:"Heebo","Assistant",Arial,sans-serif}
+.stage{height:100%;aspect-ratio:9/16;max-width:100vw;margin:0 auto;background:var(--bg);container-type:inline-size;display:grid;grid-template-rows:auto 1fr auto;position:relative;overflow:hidden;user-select:none}
+header{background:var(--bar);padding:2.4cqw 4cqw 2.6cqw;border-bottom:.3cqw solid #0006}
+.top{display:flex;justify-content:space-between;align-items:center;gap:2cqw}
+.tools{display:flex;align-items:center;gap:2cqw}
+.ttl{font-weight:800;font-size:3.8cqw}
+.phase{font-size:2.6cqw;color:#0b141a;background:var(--warn);border-radius:5cqw;padding:.6cqw 2.4cqw;font-weight:700;white-space:nowrap}
+.fs{font:inherit;font-size:2.6cqw;color:var(--tx);background:#2a3942;border:0;border-radius:5cqw;padding:.7cqw 2.4cqw;cursor:pointer;white-space:nowrap}
+.fs:active{background:var(--ok);color:#06210f}
+.sub{display:flex;justify-content:space-between;font-size:2.6cqw;color:var(--mut);margin-top:1.4cqw}
+.meter{margin-top:1.6cqw;height:2.6cqw;background:#0b141a;border-radius:2cqw;overflow:hidden}
+.fill{height:100%;width:55%;background:var(--ok);transition:width .9s ease,background .9s ease;border-radius:2cqw}
+.mlab{display:flex;justify-content:space-between;font-size:2.4cqw;margin-top:1cqw}
+#chat{overflow-y:auto;padding:3cqw 3.5cqw;display:flex;flex-direction:column;gap:2.4cqw;background:var(--bg) radial-gradient(#ffffff08 .2cqw,transparent .3cqw) 0 0/3cqw 3cqw}
+.m{max-width:84%;padding:2.2cqw 3cqw;border-radius:2.4cqw;font-size:3.5cqw;line-height:1.45;animation:pop .35s ease both}
+.m .who{font-size:2.7cqw;font-weight:800;margin-bottom:.8cqw}
+.m.in{align-self:flex-start;background:var(--in);border-top-right-radius:.6cqw}
+.m.out{align-self:flex-end;background:var(--out);border-top-left-radius:.6cqw}
+.m.ok{align-self:flex-start;background:#0d3b24;border:.35cqw solid var(--ok)}
+.m.bad{align-self:flex-start;background:#4a1416;border:.35cqw solid var(--bad)}
+.m.ok .who{color:var(--ok)}.m.bad .who{color:#ff8a8c}
+.m .t{font-size:2.2cqw;color:var(--mut);margin-top:.8cqw;text-align:left}
+.sys{align-self:center;font-size:2.6cqw;color:var(--mut);background:#182229;border-radius:2cqw;padding:.8cqw 2.6cqw}
+.dots{display:inline-flex;gap:1cqw;padding:1cqw 0}
+.dots i{width:1.6cqw;height:1.6cqw;border-radius:50%;background:var(--mut);animation:b 1s infinite}
+.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
+@keyframes b{50%{transform:translateY(-1cqw);opacity:.4}}
+@keyframes pop{from{opacity:0;transform:translateY(2cqw) scale(.97)}}
+#tray{background:var(--panel);border-top:.3cqw solid #0006;padding:2.4cqw 3.5cqw 3cqw;display:flex;flex-direction:column;gap:2cqw;min-height:8cqw}
+.hint{font-size:2.6cqw;color:var(--mut);text-align:center}
+.opt,.btn{font:inherit;color:var(--tx);background:var(--bar);border:.4cqw solid #2a3942;border-radius:2.6cqw;padding:2.6cqw 3.2cqw;font-size:3.3cqw;line-height:1.35;text-align:right;cursor:pointer;display:flex;gap:2.4cqw;align-items:flex-start;transition:transform .12s,border-color .12s}
+.opt:active,.btn:active{transform:scale(.98);border-color:var(--ok)}
+.opt b{flex:none;width:5.6cqw;height:5.6cqw;border-radius:50%;background:var(--ok);color:#06210f;display:grid;place-items:center;font-size:3cqw}
+.btn{justify-content:center;text-align:center;background:var(--ok);color:#06210f;font-weight:800;font-size:3.8cqw;border:0;padding:3.2cqw}
+.ov{position:absolute;inset:0;background:#0b141af2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3.4cqw;padding:8cqw;text-align:center;z-index:5}
+.ov h1{font-size:7cqw;margin:0;line-height:1.2}
+.ov h2{font-size:3.8cqw;margin:0;color:var(--mut);font-weight:400;line-height:1.5}
+.ov .btn{padding:3.6cqw 12cqw;font-size:4.6cqw;border-radius:8cqw}
+.ico{font-size:14cqw}.big{font-size:12cqw;font-weight:800}
+.card{background:var(--bar);border-radius:3cqw;padding:3cqw 4cqw;font-size:3.2cqw;line-height:1.6;text-align:right;width:100%}
+.hide{display:none}
