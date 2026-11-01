@@ -8,8 +8,7 @@ header{background:var(--bar);padding:2.4cqw 4cqw 2.6cqw;border-bottom:.3cqw soli
 .tools{display:flex;align-items:center;gap:2cqw}
 .ttl{font-weight:800;font-size:3.8cqw}
 .phase{font-size:2.6cqw;color:#0b141a;background:var(--warn);border-radius:5cqw;padding:.6cqw 2.4cqw;font-weight:700;white-space:nowrap}
-.fs{font:inherit;font-size:2.6cqw;color:var(--tx);background:#2a3942;border:0;border-radius:5cqw;padding:.7cqw 2.4cqw;cursor:pointer;white-space:nowrap}
-.fs:active{background:var(--ok);color:#06210f}
+
 .sub{display:flex;justify-content:space-between;font-size:2.6cqw;color:var(--mut);margin-top:1.4cqw}
 .meter{margin-top:1.6cqw;height:2.6cqw;background:#0b141a;border-radius:2cqw;overflow:hidden}
 .fill{height:100%;width:55%;background:var(--ok);transition:width .9s ease,background .9s ease;border-radius:2cqw}
@@ -50,3 +49,15 @@ header{background:var(--bar);padding:2.4cqw 4cqw 2.6cqw;border-bottom:.3cqw soli
 }
 #start h1,#start h2{text-shadow:0 .3cqw 1.2cqw #000}
 #start h2{color:var(--tx)}
+
+/* פונטים: קרנטינה לכותרות, אסיסטנט לשאר */
+html,body{font-family:"Assistant",Arial,sans-serif}
+.ttl,.ov h1,.big{font-family:"Karantina","Assistant",sans-serif;font-weight:700}
+.ttl{font-size:5cqw}
+.ov h1{font-size:10cqw;line-height:1.05}
+.big{font-size:16cqw}
+
+/* כפתור מסך מלא: אייקון בלבד, פינה שמאלית עליונה */
+.fs{position:absolute;top:1.2cqw;left:2cqw;z-index:10;width:6.4cqw;height:6.4cqw;display:grid;place-items:center;padding:0;font:inherit;font-size:4cqw;line-height:1;color:var(--tx);background:#2a3942cc;border:0;border-radius:50%;cursor:pointer}
+.fs:active{background:var(--ok);color:#06210f}
+.tools{margin-left:9cqw}
