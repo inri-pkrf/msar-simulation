@@ -42,3 +42,11 @@ header{background:var(--bar);padding:2.4cqw 4cqw 2.6cqw;border-bottom:.3cqw soli
 .ico{font-size:14cqw}.big{font-size:12cqw;font-weight:800}
 .card{background:var(--bar);border-radius:3cqw;padding:3cqw 4cqw;font-size:3.2cqw;line-height:1.6;text-align:right;width:100%}
 .hide{display:none}
+/* רקע תמונה למסך הפתיחה */
+#start{
+  background:
+    linear-gradient(rgba(11,20,26,.72), rgba(11,20,26,.90)),
+    url("../img/opening.png") center / cover no-repeat;
+}
+#start h1,#start h2{text-shadow:0 .3cqw 1.2cqw #000}
+#start h2{color:var(--tx)}
